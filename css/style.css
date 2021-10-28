@@ -59,11 +59,15 @@ body{
     padding: 10px;
   }
   
-  .nav_item a:hover, a:focus, a:visited{
+  .nav_item a:hover, a:focus{
     color: #50C7C7;
     text-decoration: underline;
     -webkit-text-decoration-style: dotted;
             text-decoration-style: dotted;
+  }
+
+  .nav_item a:visited{
+      color: #3300FF;
   }
 
   .pricing{
@@ -203,6 +207,17 @@ body{
 
 /* @media screen and (min-width: 1000px){ */
 @media print {
+
+  .card > ul li:first-child::before {
+    content: "👍";
+  }
+  .card > ul li:nth-child(2)::after {
+    content: "👍";
+  }
+  .card > ul li:last-child::before {
+    content: "👍";
+  }
+
   nav{
     width: 100%;
   }
@@ -244,7 +259,7 @@ body{
     display: none;
   }
   #gallery{
-    visibility: hidden;
+    display: none;
   }
   .card{
     border: 2px solid #45ADDD;
